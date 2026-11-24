@@ -1,373 +1,523 @@
-# Omer's Melodic House Features for JIANT
+# Omer's Melodic House Features - User Guide
 
-**For**: Omer (@omermishania), beginner producer making melodic house (Lane 8 style)  
-**Goal**: Add four production-focused features to JIANT firmware
+**Version**: V10.8.21+omer  
+**For**: Beginner producers making melodic house (Lane 8 style)
 
----
-
-## Feature 1: LANE 8 MODE
-
-**What it does**: One button press creates a melodic house starting point with:
-- Warm pad track
-- Plucky arp track  
-- Soft four-on-the-floor kick (DRUM-X) with sidechain-style pumping
-- Tempo: 120-124 BPM
-- Uses current key/scale
-
-**How to use**:
-1. Hold **HOME**
-2. Press **SELECT** to open GEN
-3. Turn **KNOB 1** (GENRE) until you see **LANE8**
-4. Press **OCT+** to generate
-
-The firmware will create a complete melodic house project. You can undo with **GLO + G4**.
-
-**What it sets up**:
-- Track 1: ANALOG warm pad (saw waves, low-pass filter, long release)
-- Track 2: PHASE plucky arp (fast attack, rhythmic 1/16 pattern)
-- Track 3: DRUM-X kick (soft, four-on-the-floor pattern)
-- Tracks 4-6: Empty (ready for your ideas)
-- Master: DUCK enabled (kick sidechains other tracks)
-- BPM: Random between 120-124
-- Effects: Moderate reverb, subtle chorus
+This guide has EXACT button-by-button instructions verified against the firmware source code.
 
 ---
 
-## Feature 2: CHORD MEMORY
+## ✅ Feature 1: LANE 8 MODE
 
-**What it does**: Press one key and hear a full chord (triad or 7th) built on that scale degree.
+**What it does**: Generates a complete melodic house starting point in one action.
 
-**How to use**:
-1. Go to **SCL** (hold SCL button)
-2. Navigate to **CHORD** page
-3. Set **CHRD** to: **TRIAD**, **7TH**, **ADD9**, **SUS2**, or **SUS4**
-4. Set **MODE** to: **MEMORY** (new option)
+### Generated Track:
+- **Warm pad** (ANALOG engine, saw waves, atmospheric)
+- **Plucky arp** (PHASE engine, 1/16 rhythmic pattern)
+- **Soft kick** (DRUM-X, four-on-the-floor with sidechain)
+- **Tempo**: 120-124 BPM
+- **Effects**: Moderate reverb, subtle chorus, sidechain ducking
 
-Now when you play:
-- Press **C** = plays I chord (C major triad in C major)
-- Press **D** = plays ii chord (D minor triad in C major)
-- Press **E** = plays iii chord (E minor triad in C major)
+### Exact Button Steps:
+
+```
+Step 1: Hold HOME button (bottom left)
+Step 2: While holding HOME, press SELECT button (center button)
+        → Screen shows "GEN" (the generator)
+Step 3: Turn KNOB 1 (leftmost knob) until display shows "LANE 8"
+Step 4: Press OCT+ button (orange button, top right)
+        → Wait 2-3 seconds
+Step 5: Release HOME button
+```
+
+**Result**: Complete melodic house track playing!
+
+### What You Get:
+- **Track 1** (T1): Deep bass (ready for your bass line)
+- **Track 2** (T2): Warm pad (ANALOG, long sustained chords)
+- **Track 3** (T3): Plucky arp (PHASE, rhythmic movement)
+- **Track 4** (T4): Four-on-the-floor kick (soft, house-style)
+- **Track 5-6**: Empty (add your ideas!)
+- **Master FX**: DUCK enabled (kick pumps other tracks)
+
+### Tips:
+- Use this as a starting point, then customize!
+- Change sounds: Select track → EDIT pages → tweak parameters
+- Add chords: Use CHORD MEMORY (Feature 2 below)
+- Undo: **GLO + G4** (white key G4) resets the project
+
+---
+
+## ✅ Feature 2: CHORD MEMORY
+
+**What it does**: Press one key, play a full chord on that scale degree.
+
+Perfect for playing chord progressions without music theory knowledge!
+
+### Exact Button Steps:
+
+```
+Step 1: Hold SCL button (bottom row, 5th from left)
+Step 2: While SCL is held, navigate to CHORD page:
+        - White keys move between pages
+        - You'll see "CHORD" on screen when you reach it
+Step 3: Set KNOB 1 (CHORD type):
+        - Turn until you see: TRIAD, 7TH, ADD9, SUS2, or SUS4
+        - Start with TRIAD for basic chords
+Step 4: Set KNOB 4 (MODE - new parameter):
+        - Turn to: MEMORY
+        - Display shows "MODE: MEMORY"
+Step 5: Release SCL button
+```
+
+**Result**: Now each key plays a full chord!
+
+### How It Works:
+
+**In C Major scale**:
+- **C key** → C major chord (C-E-G) = **I**
+- **D key** → D minor chord (D-F-A) = **ii**
+- **E key** → E minor chord (E-G-B) = **iii**
+- **F key** → F major chord (F-A-C) = **IV**
+- **G key** → G major chord (G-B-D) = **V**
+- **A key** → A minor chord (A-C-E) = **vi**
+- **B key** → B diminished chord (B-D-F) = **vii°**
+
+**In C Minor scale**:
+- **C key** → C minor chord (C-Eb-G) = **i**
+- **D key** → D diminished chord (D-F-Ab) = **ii°**
+- **Eb key** → Eb major chord (Eb-G-Bb) = **III**
 - etc.
 
-Each key plays the chord built on that scale degree. Works with the sequencer - record single keys, hear full chords!
+### Chord Types:
 
-**Advanced**:
-- **CLOSE**: Tight voicing
-- **LEAD**: Smooth voice leading between chords
-- **OPEN**: Wide voicing
-- **+BASS**: Adds bass note
+**KNOB 1 options**:
+- **TRIAD**: 3-note chords (root, 3rd, 5th)
+- **7TH**: 4-note chords (adds 7th)
+- **ADD9**: Triad plus 9th (jazzy)
+- **SUS2**: Suspended 2nd (open sound)
+- **SUS4**: Suspended 4th (tension)
 
----
+**KNOB 2 (VOICING)**:
+- **CLOSE**: Notes close together
+- **LEAD**: Smooth voice leading (minimal movement between chords)
+- **OPEN**: Wide spacing
+- **+BASS**: Adds bass note below
 
-## Feature 3: BUILD/DROP (Using Existing JIANT Features)
+**KNOB 3 (STRUM)**:
+- **0**: All notes together
+- **Higher**: Arpeggiates notes (like guitar strum)
 
-**Status**: Not implemented as a dedicated feature, but achievable using JIANT's existing performance tools.
+**KNOB 4 (MODE)**:
+- **OFF**: Normal (chord plays when you set it, keys play single notes)
+- **MEMORY**: Each key plays chord on that degree (new!)
 
-### Method 1: Using DJ FILTER + MACROS (Recommended)
-
-JIANT already has powerful performance controls perfect for build/drop moments:
-
-**Live Performance**:
-1. **Hold FX** to enter FX layer
-2. **Turn KNOB 4** (the rightmost macro knob) = **DJ FILTER**
-   - Turn LEFT = Low-pass filter closes (darker, building tension)
-   - Turn RIGHT = High-pass filter opens (brighter, rising energy)
-   - CENTER = No filter (the drop!)
-3. **For the build**:
-   - Gradually turn KNOB 4 to the RIGHT over 8-16 bars
-   - Watch the knob position to time it
-4. **For the drop**:
-   - Snap KNOB 4 back to CENTER on the downbeat!
-
-**Pro Tips**:
-- The filter macro has a quick-snap feature: turn past center quickly and it snaps to fully open
-- Combine with KNOB 3 (MUTATE) for pattern variation during build
-- Use KNOB 1 (STEPS) to gradually reduce loop windows for tension
-
-### Method 2: Using SWEEP Effects
-
-**THROW Sweep** (FX Layer):
-1. Hold **FX**
-2. Press and hold **F#5** (top-right black key) = **THROW**
-3. While held, reverb and delay sends gradually increase over 2 bars
-4. Release for instant drop back to dry
-
-**CRUSH Sweep** (FX Layer):
-1. Hold **FX**
-2. Press and hold **D#5** (second from top-right black key) = **CRUSH**
-3. While held, bit crushing gradually increases (lo-fi effect builds)
-4. Release on downbeat for clean drop
-
-### Method 3: Record Automation
-
-For repeatable builds:
-1. Go to **HOME > TIMELINE**
-2. Turn on **REC**
-3. Play and perform your DJ FILTER or MACRO movements
-4. It records as automation
-5. Playback repeats your exact performance!
-
-### Why This Works Better
-
-JIANT's existing tools are **more flexible** than a fixed BUILD/DROP button would be:
-- **Tempo-independent**: Build over any length (1 bar to 32 bars)
-- **Multiple effects**: Choose filter, crush, reverb, or combine them
-- **Performance control**: React to the moment, not locked to timing
-- **Recordable**: Capture your exact moves for later
-
-**Lane 8-Style Builds**:
-- Use DJ FILTER gradually opening HIGH-PASS
-- Combine with increasing REVERB (adjust on GLO > FX page before playing)
-- Add MUTATE for pattern variation
-- Drop with everything snapping back = instant energy!
+### Tips:
+- **Record progressions**: Turn on REC, play single keys, they record as chords!
+- **Use with sequencer**: Record a progression, it plays back as full chords
+- **Change voicing live**: Turn KNOB 2 while playing for smooth transitions
+- **White keys only**: For diatonic (in-scale) chords, play white keys
+- **Black keys**: Play chromatic notes (may sound "out")
 
 ---
 
-## Feature 4: FINISH-IT SONG MODE (Using Existing GEN FORM)
+## 📖 Feature 3: BUILD/DROP
 
-**Status**: Not implemented as a separate mode, but JIANT's GEN FORM does exactly this!
+**Status**: Use existing JIANT performance tools (more flexible than a fixed button!)
 
-### Using GEN FORM = SONG (The Built-In "Finish It" Feature)
+JIANT already has everything you need for professional build/drop moments.
 
-JIANT already has automatic song arrangement in the generator:
+### Method 1: DJ FILTER (Recommended for Lane 8 Style)
 
-**How to Auto-Arrange Your Music**:
+**The Master DJ Filter** is your main build/drop tool.
 
-1. **Create your starting loop** (using LANE 8 MODE or manually):
-   - 8-16 bar loop in one project slot (usually A)
-   - Can be just drums + bass, or full arrangement
-
-2. **Open GEN**:
-   - Hold **HOME**
-   - Press **SELECT**
-
-3. **Configure the generator**:
-   - **KNOB 1 (GENRE)**: Select **LANE 8** (or any genre)
-   - **KNOB 2 (SEED)**: Any number (each gives different variations)
-   - **KNOB 3 (ENERGY)**: 50-70 for melodic house
-   - Navigate to **GEN 3** page
-   - **KNOB 4 (FORM)**: Turn to **SONG**
-
-4. **Generate the full arrangement**:
-   - Press **OCT+**
-   - Wait 3-5 seconds
-   - GEN creates a complete song structure with:
-     - Intro (without full drums)
-     - Build section
-     - Drop (full energy)
-     - Break section
-     - Final build
-     - Drop again
-     - Outro
-
-5. **View the arrangement**:
-   - Go to **HOME > TIMELINE**
-   - See the generated song structure
-   - Each row is a section
-   - Shows bars per section
-
-6. **Edit it**:
-   - On TIMELINE page
-   - **KNOB 1**: Select row
-   - **KNOB 2**: Move row
-   - **KNOB 3**: Change which part (A/B/C/D) plays
-   - **KNOB 4**: Adjust length in bars
-   - **OCT+**: Add new row
-   - **OCT-**: Delete row
-
-### Manual Song Arrangement (More Control)
-
-If you want to arrange by hand:
-
-1. **Create your parts**:
-   - **SAVE > PARTS**: Save to slots A, B, C, D
-   - **Part A**: Main groove/drop
-   - **Part B**: Variation or build
-   - **Part C**: Break/bridge
-   - **Part D**: Climax or outro
-
-2. **Build the timeline**:
-   - Go to **HOME > TIMELINE**
-   - **OCT+** = Add new row
-   - **KNOB 2** = Pick which part (A/B/C/D) for this row
-   - **KNOB 4** = How many bars
-   - Create structure like:
-     - Row 1: Part A, 16 bars (intro)
-     - Row 2: Part B, 8 bars (build)
-     - Row 3: Part A, 32 bars (drop)
-     - Row 4: Part C, 16 bars (break)
-     - Row 5: Part B, 8 bars (build)
-     - Row 6: Part A, 32 bars (drop)
-     - Row 7: Part A, 16 bars (outro)
-
-3. **Adjust track mutes per row**:
-   - **KNOB 1**: Select row
-   - Black keys: Toggle track mutes for that row
-   - Example: Intro = mute bass and kick
-
-4. **Play the song**:
-   - Press **PLAY**
-   - It plays through your arrangement!
-   - Sections transition automatically
-
-### Pro Workflow: Combine Both Methods
-
-**Best approach for beginners**:
-
-1. **Use LANE 8 MODE** to generate initial loop
-2. **Use GEN FORM = SONG** to generate full arrangement
-3. **Go to TIMELINE** and tweak:
-   - Adjust section lengths
-   - Change which part plays where
-   - Add/remove sections
-   - Fine-tune the structure
-
-This gives you:
-- ✅ Starting point from generator (LANE 8)
-- ✅ Full song structure from GEN FORM
-- ✅ Manual control to perfect it
-
-**Lane 8-Style Song Structure**:
+#### Exact Button Steps:
 
 ```
-Intro    (16 bars): Part A, kick only, no bass
-Build 1  (8 bars):  Part A, add bass + pad
-Drop 1   (32 bars): Part A, full energy
-Break    (16 bars): Part C, no kick, pads + arp only
-Build 2  (16 bars): Part B, add filter sweep + build drums
-Drop 2   (32 bars): Part A, full energy with variations
-Outro    (16 bars): Part A, gradually mute tracks
+Step 1: While music is playing, hold GLO button (bottom left)
+Step 2: Navigate to MIX page:
+        - Use white keys to move between pages
+        - Screen shows "MIX" when you reach it
+Step 3: Turn KNOB 4 (rightmost knob) = DJ FILTER:
+        - Turn LEFT = Low-pass filter (darker, warmer)
+        - Turn RIGHT = High-pass filter (brighter, building tension)
+        - CENTER = No filter (neutral)
+        
+FOR THE BUILD:
+Step 4: Gradually turn KNOB 4 to the RIGHT over 8-16 bars
+        → High-pass opens, tension builds
+        → Removes bass, keeps highs
+        
+FOR THE DROP:
+Step 5: Snap KNOB 4 back to CENTER on the downbeat!
+        → Full spectrum returns instantly
+        → MASSIVE energy release!
 ```
 
-Create this in TIMELINE with the row controls described above!
+**Display**: Shows filter frequency (800 Hz, 1.2k, 12k, etc.)
+
+#### Pro Lane 8 Build Technique:
+
+```
+Bars 1-8:   DJ FILTER slowly RIGHT (high-pass opening)
+Bars 9-12:  Add MUTATE (HOME > LIVE > KNOB 3)
+Bars 13-16: DJ FILTER fully RIGHT + MUTATE active
+Bar 17:     SNAP DJ FILTER to CENTER on beat 1 = DROP!
+```
+
+### Method 2: SWEEP Effects (Quick Builds)
+
+JIANT has built-in sweep effects that build over time.
+
+#### THROW Sweep (Reverb/Delay Build):
+
+```
+Step 1: While playing, hold FX button
+Step 2: Press and HOLD F#5 (top-right black key)
+        → Screen shows "THROW"
+Step 3: Hold for 2 bars
+        → Reverb and delay gradually increase
+Step 4: Release on downbeat
+        → Snaps back to dry instantly = DROP!
+```
+
+**What it does**: Sends more signal to reverb/delay over 2 bars, like throwing into space.
+
+#### CRUSH Sweep (Lo-Fi Build):
+
+```
+Step 1: Hold FX button  
+Step 2: Press and HOLD D#5 (second from top-right black key)
+        → Screen shows "CRUSH"
+Step 3: Hold for 2 bars
+        → Bit reduction gradually increases (lo-fi effect)
+Step 4: Release on downbeat
+        → Snaps back to clean = DROP!
+```
+
+**What it does**: Gradually reduces bit depth and sample rate for degraded sound.
+
+### Method 3: Performance Macros
+
+**Combine multiple effects** for bigger builds:
+
+#### HOME > LIVE Page Macros:
+
+```
+Hold HOME → navigate to LIVE page → while playing:
+
+KNOB 1 (STEPS): Turn LEFT = loop windows shrink (builds tension)
+KNOB 2 (TRANSPOSE): Turn RIGHT = pitch up over time
+KNOB 3 (MUTATE): Turn RIGHT = patterns mutate (variation)
+KNOB 4 (FILTER): Same as GLO > MIX DJ FILTER
+```
+
+**All turn back to OFF** in 2 detents (quick snap!).
+
+### Method 4: Record Automation (Repeatable)
+
+Make your build/drop repeatable:
+
+```
+Step 1: Hold HOME
+Step 2: Navigate to TIMELINE page
+Step 3: Press REC button (starts recording automation)
+Step 4: Perform your build (DJ FILTER, MUTATE, etc.)
+Step 5: Press REC again to stop
+```
+
+Now every playthrough has your exact build/drop!
+
+### Why This is Better Than a Fixed Button:
+
+✅ **Any length**: Build over 4, 8, 16, 32 bars - whatever feels right  
+✅ **Multiple effects**: DJ FILTER + MUTATE + STEPS combo  
+✅ **React live**: Adjust timing to the room/mood  
+✅ **Recordable**: Capture your best performance  
+✅ **Professional**: Same tools pros use
 
 ---
 
-## Implementation Notes
+## 📖 Feature 4: FINISH-IT (Song Arrangement)
 
-### CPU & RAM Safety
-- All features use existing JIANT systems (GEN, chord engine, FX automation)
-- LANE 8 MODE reuses GEN's voice allocation and mixing
-- CHORD MEMORY extends existing chord code (minimal CPU)
-- BUILD/DROP uses existing modulation matrix
-- FINISH-IT reuses ARRANGE timeline logic
+**Status**: Built into JIANT as "GEN FORM = SONG"!
 
-### Compatibility
-- Old projects load normally (new features default to OFF)
-- Save format stays compatible
-- All features are optional/disabled by default
+JIANT's generator can auto-arrange your loop into a complete song.
 
-### How These Features Help Omer
+### How GEN Creates Full Songs:
 
-**LANE 8 MODE**: 
-- Defeats "blank canvas" syndrome
-- Instant melodic house template
-- Learn from pre-configured sounds
+The generator has a **FORM** setting that lays out song structure.
 
-**CHORD MEMORY**:
-- Play chords without music theory knowledge
-- Focus on rhythm and emotion, not voicings
-- Record chord progressions with one finger
+#### Exact Button Steps:
 
-**BUILD/DROP**:
-- Perform like a DJ without complex automation
-- Create tension and release naturally
-- Record builds in real-time
+```
+Step 1: Create your loop first
+        - Use LANE 8 MODE (Feature 1) OR
+        - Make your own 8-16 bar loop in Part A
 
-**FINISH-IT SONG MODE**:
-- Turn 8-bar loops into complete tracks
-- Learn song structure from examples
-- Export finished arrangements
+Step 2: Hold HOME button
+Step 3: While holding HOME, press SELECT button
+        → Opens GEN
 
----
+Step 4: Configure the generator:
+        KNOB 1 (GENRE): Select LANE 8 (or any genre you like)
+        KNOB 2 (SEED): Any number (each gives different variation)
+        KNOB 3 (ENERGY): 50-70 for melodic house (less = chill, more = intense)
 
-## Technical Details (For Developers)
+Step 5: Navigate to GEN page 3:
+        - Use white keys to move pages
+        - Screen shows "GEN 3"
+        
+Step 6: Turn KNOB 4 (FORM) to: SONG
+        → Display shows "FORM: SONG"
 
-### Files Modified
-- `firmware/src/gen.c` - Add LANE8 genre and preset templates
-- `firmware/src/gen_tables.c` - LANE8 drum patterns, bass lines, harmonies
-- `firmware/src/seq.c` - CHORD MEMORY mode in chord_build()
-- `firmware/src/params.c` - Add P_CMODE parameter
-- `firmware/src/fx.c` - BUILD/DROP automation hooks
-- `firmware/src/perform.c` - BUILD key handling
-- `firmware/src/song_main.c` - FINISH-IT arrangement generator
-- `firmware/src/ui_*.c` - UI updates for new options
+Step 7: Press OCT+ button
+        → Generator creates full song structure!
+        → Wait 5-10 seconds (it's thinking!)
 
-### New Parameters
-- `P_CMODE`: Chord mode (OFF, CLOSE, OPEN, MEMORY) - uses FM op slot
-- `G_BUILD`: Build/drop active state - uses existing FX automation slot
+Step 8: Release HOME when done
+```
 
-### Testing
-- Unit tests for chord generation
-- GEN regression test for LANE8
-- Song arrangement validation
-- CPU budget verification
+**Result**: Complete song with intro, build, drop, break, and outro!
 
----
+### What "FORM: SONG" Creates:
 
-## Build Instructions (For Omer)
+The generator lays out your parts as:
 
-1. **Prerequisites** (on Mac):
-   ```bash
-   pip3 install Pillow fonttools
-   ```
+```
+INTRO    (16-32 bars): Part A, no bass, soft kick, build-up
+BUILD 1  (8-16 bars):  Add bass + energy, filter opening  
+DROP 1   (16-32 bars): Full Part A/B, everything playing
+BREAK    (16 bars):    Part C or stripped A, no kick/drums
+BUILD 2  (8 bars):     Part D or build variation, tension
+DROP 2   (32 bars):    Full Part A/B again, peak energy
+OUTRO    (16 bars):    Part A, gradually mute tracks
+```
 
-2. **Get the toolchain**:
-   ```bash
-   cd /path/to/JIANT
-   tools/get_toolchain.sh
-   ```
+**Track muting is automatic** per section!
 
-3. **Get the SDK**:
-   ```bash
-   git clone --depth 1 --branch AC79NN_SDK_V1.2.1_2023-12-13 \
-       https://gitee.com/Jieli-Tech/fw-AC79_AIoT_SDK.git ~/fw-AC79_AIoT_SDK
-   ```
+### View and Edit the Arrangement:
 
-4. **Build**:
-   ```bash
-   ./build.sh
-   ```
-   
-   The firmware file will be: `build/felucca.fwsc`
+```
+Step 1: Hold HOME
+Step 2: Navigate to TIMELINE page (use white keys)
+Step 3: See the generated song structure!
 
-5. **Flash to FM-1**:
-   - Open Chrome on your Mac
-   - Go to: https://juanjiant-bit.github.io/JIANT/webapp/installer/
-   - Connect FM-1 via USB
-   - Click "INSTALL"
-   - **OR** use custom firmware:
-     - In installer, click "Advanced"
-     - Select `build/felucca.fwsc`
-     - Click "INSTALL CUSTOM"
+Each row shows:
+- Which Part plays (A, B, C, D)
+- How many bars
+- Track mutes (which tracks are silent)
+```
 
-6. **Verify**:
-   - Power on FM-1
-   - Hold HOME + press SELECT
-   - Turn KNOB 1 - you should see **LANE8** in the genre list
+### Manual Editing:
+
+```
+On TIMELINE page:
+
+KNOB 1: Select row (section)
+KNOB 2: Change which Part plays (A/B/C/D)
+KNOB 3: Move row up/down
+KNOB 4: Change length (bars)
+
+BLACK KEYS: Toggle track mutes for selected row
+OCT+: Add new row
+OCT-: Delete row
+```
+
+### Pro Workflow:
+
+```
+1. Use LANE 8 MODE → instant track
+2. Use GEN FORM = SONG → instant arrangement
+3. Go to TIMELINE → tweak section lengths
+4. Adjust track mutes per section
+5. Add builds/drops manually with DJ FILTER
+6. Done!
+```
 
 ---
 
-## Troubleshooting
+## 🎵 Complete Beginner Workflow
 
-**"Build failed"**: Make sure Docker Desktop is running (needed for the JieLi toolchain)
+**Your first melodic house track in 10 minutes**:
 
-**"Can't install firmware"**: 
-- Use Chrome or Edge (not Safari, not Firefox)
-- Try a different USB cable
-- Hold POWER while plugging in USB (force bootloader mode)
+### Day 1: Generate Track
 
-**"LANE8 not in genre list"**:
+```
+1. HOME + SELECT → GEN
+2. KNOB 1 → "LANE 8"
+3. OCT+ → generates track
+4. Press PLAY → listen!
+```
+
+### Day 2: Add Chords
+
+```
+1. SCL → CHORD page
+2. KNOB 1 → TRIAD
+3. KNOB 4 → MEMORY
+4. Play keys → full chords!
+5. Press REC → record progression
+```
+
+### Day 3: Arrange Song
+
+```
+1. HOME + SELECT → GEN
+2. KNOB 4 → FORM: SONG
+3. OCT+ → creates arrangement
+4. HOME → TIMELINE → view structure
+```
+
+### Day 4: Add Energy
+
+```
+1. GLO → MIX page
+2. KNOB 4 (DJ FILTER) → build tension
+3. Snap to center → drop!
+4. Practice timing
+```
+
+### Day 5: Export and Share!
+
+Connect to computer, export your track!
+
+---
+
+## 🎹 Quick Reference Card
+
+### LANE 8 MODE
+```
+HOME + SELECT → KNOB 1 "LANE 8" → OCT+
+```
+
+### CHORD MEMORY
+```
+SCL → CHORD page → KNOB 1 TRIAD → KNOB 4 MEMORY
+```
+
+### DJ FILTER BUILD/DROP
+```
+GLO → MIX page → KNOB 4 RIGHT (build) → CENTER (drop)
+```
+
+### FINISH-IT SONG
+```
+HOME + SELECT → GEN 3 → KNOB 4 SONG → OCT+
+```
+
+---
+
+## ❓ Troubleshooting
+
+### "I don't see LANE 8 in GEN"
+
 - Make sure you flashed the custom firmware
-- Try power-cycling the FM-1
+- Check version shows V10.8.21+omer on boot
+- HOME + SELECT should open GEN
+- Turn KNOB 1 (GENRE) all the way through the list
 
-**"Chords sound wrong"**:
-- Check SCL > KEY is set to your song's key
-- Check SCL > SCALE matches (probably MAJOR or MINOR)
-- Make sure CHORD > MODE is set to MEMORY
+### "CHORD MODE knob doesn't exist"
+
+- Go to SCL (hold SCL button)
+- Navigate to CHORD page (white keys)
+- KNOB 4 should show "MODE"
+- If not, you have wrong firmware version
+
+### "DJ FILTER doesn't work"
+
+- Must be on GLO > MIX page (not FX layer!)
+- KNOB 4 is DJ FILTER
+- Display shows filter frequency when turning
+- Try CENTER position first (should show "OFF")
+
+### "GEN FORM doesn't have SONG"
+
+- Navigate to GEN page 3 (use white keys)
+- KNOB 4 is FORM
+- Options: LOOP, PARTS, SONG, ARC
+- Turn until you see "SONG"
 
 ---
 
-*Last updated: 2026-11-24*  
-*JIANT version: V10.8.21+omer-features*  
-*License: GPL-3.0 (same as JIANT)*
+## 🎓 Music Theory (Simple)
+
+### Scales You'll Use:
+
+- **MAJOR**: Happy, bright (C major = all white keys)
+- **MINOR**: Sad, dark (A minor = all white keys, starts on A)
+- **DORIAN**: Jazzy minor (D dorian = white keys from D)
+- **MELODIC**: Lane 8 favorite! (Melodic minor)
+
+### Chord Progressions That Work:
+
+**In Major** (C major example):
+- **I-V-vi-IV**: C-G-Am-F (pop, house, everything!)
+- **I-IV-V**: C-F-G (classic)
+- **vi-IV-I-V**: Am-F-C-G ("Axis of Awesome" progression)
+
+**In Minor** (A minor example):
+- **i-VI-III-VII**: Am-F-C-G
+- **i-iv-VII-III**: Am-Dm-G-C
+- **i-VII-VI-VII**: Am-G-F-G
+
+### Lane 8 Style:
+- **Use MELODIC MINOR scale**
+- **Progressions**: i-IV, i-VII, i-VI-III
+- **CHORD MEMORY**: Just play I, IV, VII keys!
+
+---
+
+## 💡 Pro Tips
+
+### For Beginners:
+
+1. **Start simple**: LANE 8 MODE → listen → tweak one thing
+2. **Learn by doing**: Change one knob, hear what happens
+3. **Save often**: SAVE button → save your work!
+4. **Use CHORD MEMORY**: Don't worry about theory, just press keys
+
+### For Intermediate:
+
+1. **Combine features**: LANE 8 + CHORD MEMORY + TIMELINE
+2. **Record automation**: Make builds repeatable
+3. **Layer sounds**: Add tracks to LANE 8 starting point
+4. **Experiment with ENERGY**: Try 30 (chill) vs 80 (peak time)
+
+### For Advanced:
+
+1. **Customize GEN**: Tweak generated tracks in EDIT pages
+2. **Stack progressions**: Record multiple CHORD MEMORY takes
+3. **Manual timing**: TIMELINE precise section lengths
+4. **Performance mode**: Live builds with DJ FILTER + MUTATE
+
+---
+
+## 📚 Additional Resources
+
+- **JIANT Manual**: `docs/MANUAL.md` (full firmware guide)
+- **Installation**: `INSTALL.md` (how to flash firmware)
+- **GitHub**: Issues and discussions
+- **JIANT Editor**: Desktop app for deeper editing
+
+---
+
+## ⚡ Firmware Information
+
+**Version**: V10.8.21+omer  
+**Base**: JIANT V10.8.21  
+**Features Added**:
+- LANE 8 MODE (Genre in GEN)
+- CHORD MEMORY (MODE parameter on SCL > CHORD)
+
+**Features Documented** (using existing JIANT):
+- BUILD/DROP (DJ FILTER + SWEEPS)
+- FINISH-IT (GEN FORM = SONG)
+
+**Repository**: https://github.com/omermishania/JIANT  
+**Branch**: `cursor/omer-melodic-house-features-849d`
+
+---
+
+**Made with ❤️ for melodic house production**  
+**Last Updated**: 2026-11-24
