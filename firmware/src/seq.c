@@ -267,7 +267,7 @@ static uint32_t chord_build(const track_t *t, uint32_t root, uint8_t *out)
     
     /* (Omer) CHORD MEMORY: map played note to scale degree, then build chord on that degree */
     if (cmemory == 1 && mode >= CD_TRI && mode <= CD_SUS4) {
-        uint32_t mask = scale_mask(t), deg[12], c = 0, guard = 12;
+        uint32_t mask = scale_mask(t), deg[12], c = 0;
         int32_t rt = t->p[P_ROOT], key_offset;
         
         /* Map input note to scale degree (white keys = degrees 0-6, repeat across octaves) */
