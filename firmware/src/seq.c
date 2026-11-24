@@ -262,7 +262,34 @@ static uint32_t chord_build(const track_t *t, uint32_t root, uint8_t *out)
                                      {0, 7, 12, -1}};
     const engine_t *e = ENGINES[eng_idx(t->eng_req)];
     uint32_t mode = (uint32_t)t->p[P_CHRD], vc = (uint32_t)t->p[P_CVOI], n = 0, i, j, ti = trk_index(t) % NTRK;
+    uint32_t cmemory = (uint32_t)t->p[P_CMODE];  /* (Omer) CHORD MEMORY mode */
     int32_t nt[KB_CH + 1], r = (int32_t)root;
+    
+    /* (Omer) CHORD MEMORY: map played note to scale degree, then build chord on that degree */
+    if (cmemory == 1 && mode >= CD_TRI && mode <= CD_SUS4) {
+        uint32_t mask = scale_mask(t), deg[12], c = 0, guard = 12;
+        int32_t rt = t->p[P_ROOT], key_offset;
+        
+        /* Map input note to scale degree (white keys = degrees 0-6, repeat across octaves) */
+        key_offset = ((int32_t)root - rt + 120) % 12;
+        
+        /* Build scale degree array */
+        for (i = 0; i < 12u; i++)
+            if ((mask >> i) & 1u)
+                deg[c++] = i;
+        
+        /* For modes of seven: map white-key-like input (C D E F G A B pattern) to scale degrees */
+        if (c == 7u) {
+            static const uint8_t WHITE_KEY_MAP[12] = {0, 0, 1, 1, 2, 3, 3, 4, 4, 5, 5, 6};  /* Chromatic to white key */
+            uint32_t degree = WHITE_KEY_MAP[key_offset];
+            /* Calculate actual root note for this scale degree */
+            r = rt + (int32_t)deg[degree] + 12 * ((int32_t)root / 12);
+            /* Adjust octave to be near original input */
+            while (r < (int32_t)root - 6 && r + 12 <= 108) r += 12;
+            while (r > (int32_t)root + 6 && r - 12 >= 24) r -= 12;
+        }
+    }
+    
     if (!mode || mode > CD_POW || e->oneshot || (e->keys && e->keys(t, 0) >= 0) || t->p[P_VOICE] != V_POLY) {
         out[0] = (uint8_t)root;
         return 1;

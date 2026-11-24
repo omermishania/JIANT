@@ -120,8 +120,9 @@ enum {                          /* per-track parameters */
 /* (JIANT 0.6.81) SCL > CHORD (seq.c chord_build), in DIGITAL's OP4 slots (0, every project and preset before it: OFF,
  * CLOSE, no strum) */
 #define P_CHRD P_FM4_ATK               /* OFF; in the scale: TRIAD 7TH ADD9 SUS2 SUS4; any key: MAJ MIN 7 MAJ7 MIN7 POWER */
-#define P_CVOI P_FM4_DEC               /* CLOSE, LEAD (each chord the inversion nearest the last), OPEN, +BASS */
+#define P_CVOI P_FM4_DEC               /* CLOSE, LEAD (each chord the inversion nearest the last), OPEN, +BASS, MEMORY */
 #define P_CSTR P_FM4_REL               /* STRUM: 0 at once; up to ~63 ms between the notes, low to high */
+#define P_CMODE P_FM4_SUS              /* (Omer's features) CHORD MODE: OFF or MEMORY (each key plays chord on that scale degree) */
 /* (JIANT 0.6.87) SEQ > HUMAN, in DIGITAL's OP1 SUS / LEVEL and OP2 SUS slots (127, every project and preset before
  * it: shown as 0 %, none): how much each note's VELOCITY, TIME (a little late) and GATE vary at random as the sequencer
  * plays them (seq.c hum_amt); stored the other way round, 127 - the amount */
