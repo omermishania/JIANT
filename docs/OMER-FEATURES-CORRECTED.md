@@ -9,14 +9,16 @@
 
 **Exact Button Steps**:
 ```
-1. Hold HOME button
-2. While holding HOME, press SELECT button
-3. Turn KNOB 1 (GENRE) → "LANE 8" appears last in list (position 46/46)
-4. Press OCT+
+1. From any page EXCEPT HOME > MACROS:
+   Hold HOME button, then press SELECT button
+   (On HOME > MACROS, HOME + SELECT dices the macros instead)
+2. Turn KNOB 1 (GENRE) → "LANE 8" appears last in list (position 46/46)
+3. Press OCT+
 ```
 
 **Citations**:
-- `firmware/src/ui_input.c:2215` - HOME + SELECT opens GEN
+- `firmware/src/ui_input.c:2215` - HOME + SELECT opens GEN (except on MACROS)
+- `README.md:487` - "HOME + SELECT on MACROS dices the macros (elsewhere it opens GEN)"
 - `firmware/src/gen.c:2708` - KNOB 1 (k==0) controls genre
 - `firmware/src/gen_tables.c:585` - LANE 8 at array index 43 (last genre)
 - `firmware/src/gen_tables.c:597` - GEN_NPOS = NGENRE + 2 (46 total: EXPLORE, RANDOM, 44 genres)
@@ -48,25 +50,38 @@
 
 ## Feature 3: BUILD/DROP (Using Existing DJ FILTER)
 
-**Exact Button Steps**:
+**Two Ways to Access DJ FILTER**:
+
+**Method A: HOME > LIVE MIX** (easiest!)
+```
+1. Hold HOME button
+2. Navigate to LIVE MIX page (white keys move between pages)
+3. Turn KNOB 1 (FILTER - the DJ filter):
+   - Turn RIGHT = High-pass opens (builds tension)
+   - Turn LEFT = Low-pass closes (darker)
+   - CENTER = No filter (neutral)
+```
+
+**Method B: GLO > MIXER**
 ```
 1. Hold GLO button
 2. Navigate to MIXER page (white keys move between pages)
 3. Turn KNOB 4 (DJ FILTER):
-   - Turn RIGHT = High-pass opens (builds tension)
-   - Turn LEFT = Low-pass closes (darker)
-   - CENTER = No filter (neutral)
-4. For BUILD: Turn KNOB 4 gradually RIGHT over 8-16 bars
-5. For DROP: Snap KNOB 4 to CENTER on downbeat!
+   - Same controls as Method A
 ```
 
+**For BUILD/DROP**:
+- BUILD: Turn FILTER gradually RIGHT over 8-16 bars (high-pass opens)
+- DROP: Snap FILTER to CENTER on downbeat!
+
 **Citations**:
-- `firmware/src/params.c:663` - MIXER page: FAM_TRK, comment says "GLO button"
+- `README.md:553` - HOME > LIVE MIX (was SCOPE), KNOB 1 "FILTER the DJ filter"
+- `README.md:507` - "pages renamed (EDIT's PLAY is VOICES, SCOPE is LIVE MIX)"
+- `firmware/src/params.c:663` - GLO > MIXER, KNOB 4 is DJ FILTER
 - `firmware/src/ui_input.c:547` - "KNOB 4 the master DJ FILTER (G_DJF...)"
-- `firmware/src/ui_input.c:556` - case 3: controls song.g[G_DJF] (slot 3 = KNOB 4)
 - `firmware/src/core.h:159` - G_DJF comment: "GLO > MIXER KNOB 4"
 
-**Location**: GLO > MIXER, KNOB 4 (NOT "FX KNOB 4"!)
+**Two locations**: HOME > LIVE MIX (KNOB 1) OR GLO > MIXER (KNOB 4)
 
 ---
 
@@ -74,14 +89,14 @@
 
 **Exact Button Steps**:
 ```
-1. Hold HOME
-2. While holding HOME, press SELECT (opens GEN)
-3. On GEN page 1 (default page):
+1. From any page EXCEPT HOME > MACROS:
+   Hold HOME, then press SELECT (opens GEN)
+2. On GEN page 1 (default page):
    - KNOB 1 (GENRE) → LANE 8 or any genre
    - KNOB 2 (SEED) → any number
    - KNOB 3 (ENERGY) → 50-70
    - KNOB 4 (FORM) → SONG
-4. Press OCT+
+3. Press OCT+
 ```
 
 **Citations**:
@@ -99,8 +114,8 @@
 
 | Was Wrong | Now Correct | Citation |
 |-----------|-------------|----------|
-| "Press SELECT for GEN" | "HOME + SELECT" | `ui_input.c:2215` |
-| "FX KNOB 4 for DJ FILTER" | "GLO > MIXER KNOB 4" | `params.c:663`, `ui_input.c:547` |
+| "Press SELECT for GEN" | "HOME + SELECT (not on MACROS)" | `ui_input.c:2215`, `README.md:487` |
+| "FX KNOB 4 for DJ FILTER" | "HOME > LIVE MIX KNOB 1 or GLO > MIXER KNOB 4" | `README.md:553`, `params.c:663` |
 | "KNOB 4 MODE parameter" | "KNOB 2 VOICING = MEMORY" | `params.c:248`, `seq.c:247` |
 | "GEN 3 page FORM" | "GEN page 1 KNOB 4" | `gen.c:2684`, `gen.c:2710` |
 | "LANE 8 halfway through list" | "LANE 8 is LAST (46/46)" | `gen_tables.c:585-597` |

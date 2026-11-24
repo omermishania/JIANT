@@ -3,6 +3,7 @@ name: Publish Custom Installer
 on:
   push:
     branches:
+      - main
       - cursor/omer-melodic-house-features-849d
   workflow_dispatch:
 
@@ -37,7 +38,7 @@ jobs:
       - name: Build installer site
         run: |
           mkdir -p _site
-          python3 web/make_site.py release/jiant-v10.8.21-omer-features.fwsc dev _site
+          python3 web/make_site.py release/*.fwsc dev _site
           echo "Omer's JIANT Fork - Melodic House Features" > _site/README.md
           echo "Open webapp/installer/ to install the custom firmware" >> _site/README.md
       
