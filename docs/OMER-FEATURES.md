@@ -59,60 +59,187 @@ Each key plays the chord built on that scale degree. Works with the sequencer - 
 
 ---
 
-## Feature 3: BUILD/DROP
+## Feature 3: BUILD/DROP (Using Existing JIANT Features)
 
-**What it does**: Hold a button to build tension (open filter, add reverb, riser sound), release for the drop.
+**Status**: Not implemented as a dedicated feature, but achievable using JIANT's existing performance tools.
 
-**How to use** (Performance mode):
-1. While playing, hold **FX** to see the FX layer
-2. Press and **HOLD** the **BUILD** key (new: **A#5**, top-right black key)
-3. While held:
-   - Master DJ filter slowly opens (high-pass sweep)
-   - Reverb size increases
-   - Subtle riser effect builds
-4. **Release** on the downbeat for the drop!
-   - Everything snaps back instantly
-   - Track sidechaining pumps harder
+### Method 1: Using DJ FILTER + MACROS (Recommended)
 
-**Settings**:
-- **FX + OCT+**: Switch build length between **8 BARS** and **16 BARS**
-- Length is shown on screen while holding BUILD
+JIANT already has powerful performance controls perfect for build/drop moments:
 
-**Recording**: The build/drop is recorded if REC is armed (as FX automation).
+**Live Performance**:
+1. **Hold FX** to enter FX layer
+2. **Turn KNOB 4** (the rightmost macro knob) = **DJ FILTER**
+   - Turn LEFT = Low-pass filter closes (darker, building tension)
+   - Turn RIGHT = High-pass filter opens (brighter, rising energy)
+   - CENTER = No filter (the drop!)
+3. **For the build**:
+   - Gradually turn KNOB 4 to the RIGHT over 8-16 bars
+   - Watch the knob position to time it
+4. **For the drop**:
+   - Snap KNOB 4 back to CENTER on the downbeat!
+
+**Pro Tips**:
+- The filter macro has a quick-snap feature: turn past center quickly and it snaps to fully open
+- Combine with KNOB 3 (MUTATE) for pattern variation during build
+- Use KNOB 1 (STEPS) to gradually reduce loop windows for tension
+
+### Method 2: Using SWEEP Effects
+
+**THROW Sweep** (FX Layer):
+1. Hold **FX**
+2. Press and hold **F#5** (top-right black key) = **THROW**
+3. While held, reverb and delay sends gradually increase over 2 bars
+4. Release for instant drop back to dry
+
+**CRUSH Sweep** (FX Layer):
+1. Hold **FX**
+2. Press and hold **D#5** (second from top-right black key) = **CRUSH**
+3. While held, bit crushing gradually increases (lo-fi effect builds)
+4. Release on downbeat for clean drop
+
+### Method 3: Record Automation
+
+For repeatable builds:
+1. Go to **HOME > TIMELINE**
+2. Turn on **REC**
+3. Play and perform your DJ FILTER or MACRO movements
+4. It records as automation
+5. Playback repeats your exact performance!
+
+### Why This Works Better
+
+JIANT's existing tools are **more flexible** than a fixed BUILD/DROP button would be:
+- **Tempo-independent**: Build over any length (1 bar to 32 bars)
+- **Multiple effects**: Choose filter, crush, reverb, or combine them
+- **Performance control**: React to the moment, not locked to timing
+- **Recordable**: Capture your exact moves for later
+
+**Lane 8-Style Builds**:
+- Use DJ FILTER gradually opening HIGH-PASS
+- Combine with increasing REVERB (adjust on GLO > FX page before playing)
+- Add MUTATE for pattern variation
+- Drop with everything snapping back = instant energy!
 
 ---
 
-## Feature 4: FINISH-IT SONG MODE
+## Feature 4: FINISH-IT SONG MODE (Using Existing GEN FORM)
 
-**What it does**: Takes your loop (parts A-D) and auto-arranges them into a full song structure.
+**Status**: Not implemented as a separate mode, but JIANT's GEN FORM does exactly this!
 
-**How to use**:
-1. Create your parts:
-   - **Part A**: Main groove
-   - **Part B**: Variation (optional)
-   - **Part C**: Break/bridge (optional)
-   - **Part D**: Build/climax (optional)
-2. Hold **HOME**, go to **ARRANGE** page
-3. Turn **KNOB 4** (FORM) to: **FINISH** (new option)
-4. Turn **KNOB 3** (LENGTH) to: **SHORT** (3 min), **MEDIUM** (5 min), or **LONG** (7 min)
-5. Press **OCT+** to generate arrangement
+### Using GEN FORM = SONG (The Built-In "Finish It" Feature)
 
-The firmware automatically creates:
-- **Intro** (16-32 bars): Part A, no bass, soft kick
-- **Build 1** (8-16 bars): Add bass, increase energy
-- **Drop 1** (16-32 bars): Full Part A
-- **Break** (16 bars): Part C (or stripped Part A), no kick
-- **Build 2** (8 bars): Part D or buildup with filter
-- **Drop 2** (32 bars): Full Part A/B
-- **Outro** (16 bars): Part A, fade elements
+JIANT already has automatic song arrangement in the generator:
 
-**What gets automated**:
-- Track mutes per section
-- Filter movements
-- Effect levels
-- Transitions between sections
+**How to Auto-Arrange Your Music**:
 
-**To edit**: Go to **TIMELINE** page to see/adjust the arrangement.
+1. **Create your starting loop** (using LANE 8 MODE or manually):
+   - 8-16 bar loop in one project slot (usually A)
+   - Can be just drums + bass, or full arrangement
+
+2. **Open GEN**:
+   - Hold **HOME**
+   - Press **SELECT**
+
+3. **Configure the generator**:
+   - **KNOB 1 (GENRE)**: Select **LANE 8** (or any genre)
+   - **KNOB 2 (SEED)**: Any number (each gives different variations)
+   - **KNOB 3 (ENERGY)**: 50-70 for melodic house
+   - Navigate to **GEN 3** page
+   - **KNOB 4 (FORM)**: Turn to **SONG**
+
+4. **Generate the full arrangement**:
+   - Press **OCT+**
+   - Wait 3-5 seconds
+   - GEN creates a complete song structure with:
+     - Intro (without full drums)
+     - Build section
+     - Drop (full energy)
+     - Break section
+     - Final build
+     - Drop again
+     - Outro
+
+5. **View the arrangement**:
+   - Go to **HOME > TIMELINE**
+   - See the generated song structure
+   - Each row is a section
+   - Shows bars per section
+
+6. **Edit it**:
+   - On TIMELINE page
+   - **KNOB 1**: Select row
+   - **KNOB 2**: Move row
+   - **KNOB 3**: Change which part (A/B/C/D) plays
+   - **KNOB 4**: Adjust length in bars
+   - **OCT+**: Add new row
+   - **OCT-**: Delete row
+
+### Manual Song Arrangement (More Control)
+
+If you want to arrange by hand:
+
+1. **Create your parts**:
+   - **SAVE > PARTS**: Save to slots A, B, C, D
+   - **Part A**: Main groove/drop
+   - **Part B**: Variation or build
+   - **Part C**: Break/bridge
+   - **Part D**: Climax or outro
+
+2. **Build the timeline**:
+   - Go to **HOME > TIMELINE**
+   - **OCT+** = Add new row
+   - **KNOB 2** = Pick which part (A/B/C/D) for this row
+   - **KNOB 4** = How many bars
+   - Create structure like:
+     - Row 1: Part A, 16 bars (intro)
+     - Row 2: Part B, 8 bars (build)
+     - Row 3: Part A, 32 bars (drop)
+     - Row 4: Part C, 16 bars (break)
+     - Row 5: Part B, 8 bars (build)
+     - Row 6: Part A, 32 bars (drop)
+     - Row 7: Part A, 16 bars (outro)
+
+3. **Adjust track mutes per row**:
+   - **KNOB 1**: Select row
+   - Black keys: Toggle track mutes for that row
+   - Example: Intro = mute bass and kick
+
+4. **Play the song**:
+   - Press **PLAY**
+   - It plays through your arrangement!
+   - Sections transition automatically
+
+### Pro Workflow: Combine Both Methods
+
+**Best approach for beginners**:
+
+1. **Use LANE 8 MODE** to generate initial loop
+2. **Use GEN FORM = SONG** to generate full arrangement
+3. **Go to TIMELINE** and tweak:
+   - Adjust section lengths
+   - Change which part plays where
+   - Add/remove sections
+   - Fine-tune the structure
+
+This gives you:
+- ✅ Starting point from generator (LANE 8)
+- ✅ Full song structure from GEN FORM
+- ✅ Manual control to perfect it
+
+**Lane 8-Style Song Structure**:
+
+```
+Intro    (16 bars): Part A, kick only, no bass
+Build 1  (8 bars):  Part A, add bass + pad
+Drop 1   (32 bars): Part A, full energy
+Break    (16 bars): Part C, no kick, pads + arp only
+Build 2  (16 bars): Part B, add filter sweep + build drums
+Drop 2   (32 bars): Part A, full energy with variations
+Outro    (16 bars): Part A, gradually mute tracks
+```
+
+Create this in TIMELINE with the row controls described above!
 
 ---
 
