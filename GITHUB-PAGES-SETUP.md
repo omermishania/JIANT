@@ -1,7 +1,7 @@
-# GitHub Pages Setup for Omer's JIANT Fork
+# GitHub Pages Setup for Costa OS
 
 ## 🎯 Goal
-Enable the web installer at: `https://omermishania.github.io/JIANT/webapp/installer/`
+Enable the Costa OS web installer at: `https://omermishania.github.io/JIANT/webapp/installer/`
 
 ---
 
@@ -72,6 +72,8 @@ git push origin main
 
 **URL**: https://omermishania.github.io/JIANT/webapp/installer/
 
+**What you'll see**: Costa OS installer (fork of JIANT)
+
 **If you get 404**:
 1. Wait 2-3 minutes (Pages deployment can be slow)
 2. Hard refresh: Cmd+Shift+R (Mac) or Ctrl+Shift+R (Windows)
@@ -82,13 +84,13 @@ git push origin main
 ## ✅ HOW TO VERIFY IT WORKED
 
 1. Open: https://omermishania.github.io/JIANT/webapp/installer/
-2. You should see the JIANT installer with:
-   - "JIANT FM dev" or "JIANT FM custom" package listed
-   - File size: 596 KB
+2. You should see the Costa OS installer with:
+   - "COSTA OS" package listed
+   - File size: ~596 KB
    - Install button ready to use
 
 3. Connect FM-1 via USB
-4. Click **"Install JIANT FM"**
+4. Click **"Install COSTA OS"**
 5. Follow backup and install prompts
 
 ---

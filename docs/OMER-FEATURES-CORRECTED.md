@@ -1,7 +1,10 @@
-# Omer's Melodic House Features - CORRECTED User Guide
+# COSTA OS - Melodic House Features
 
-**Version**: V10.8.25+omer  
+**Version**: COSTA 1.0 (based on JIANT V10.8.25+omer)  
 **All button steps verified against firmware source code with file:line citations**
+
+Costa OS is a fork of JIANT by Juan Jiant (GPL-3.0).  
+Original JIANT: https://github.com/juanjiant-bit/JIANT
 
 ---
 
@@ -122,7 +125,7 @@
 
 ---
 
-**Version**: V10.8.25+omer  
-**SHA256**: `28647c16b9846306565ccd471f499fe7e02c3672226a87fbfa94d5c85b120a6a`  
-**File**: `release/jiant-v10.8.25-omer-features.fwsc`  
+**Version**: COSTA 1.0 (based on JIANT V10.8.25+omer)  
+**Repository**: https://github.com/omermishania/JIANT  
+**Installer**: https://omermishania.github.io/JIANT/webapp/installer/  
 **Date**: 2026-11-24
