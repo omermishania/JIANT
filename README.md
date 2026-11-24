@@ -17,6 +17,10 @@ Instruments (GPL-3.0) and takes its song system from [SLOOP](https://github.com/
 > **Current public release: V10.8.25** (not a beta). **Back up your projects before updating**: save a complete
 > backup with the editor or the installer first. If something doesn't work for you, V10.7.81 is still offered in the
 > installer.
+>
+> **Omer's fork (V10.8.21+omer)**: This fork adds melodic house production features - LANE 8 MODE (a melodic house
+> genre in GEN) and CHORD MEMORY (single-key chord playing on SCL > CHORD > MODE). See [docs/OMER-FEATURES.md](docs/OMER-FEATURES.md)
+> for detailed instructions.
 
 ## ▶ [JIANT Studio](https://juanjiant-bit.github.io/JIANT/studio/): everything in one page
 

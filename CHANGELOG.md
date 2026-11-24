@@ -6,9 +6,41 @@ Custom firmware for the M-VAVE FM-1 by Juan Jiant. Newest version first.
 
 | Version | Date | Status |
 | --- | --- | --- |
+| **V10.8.21+omer** | 2026-11-24 | **Custom (Omer's fork)** |
 | **V10.8.21** | 2026-11-23 | **Public** |
 | V10.8.1 … V10.8.20 | 2026-11-21 … 11-23 | Beta |
 | **V10.7.81** | 2026-11-21 | **Public** |
+
+---
+
+## V10.8.21+omer — Omer's melodic house features (2026-11-24)
+
+**New Features for Melodic House Production**
+
+**LANE 8 MODE** (GEN > GENRE):
+- New melodic house genre inspired by Lane 8's style
+- Tempo: 120-124 BPM with moderate swing (12%)
+- Automatic setup: warm pad, plucky arp, soft kick with sidechain
+- Deep house drums with jazzy progressions
+- Increased reverb and space (70% wet)
+- Uses soft kit, sub bass, pads, and plucky sounds
+- Perfect starting point for melodic house/progressive tracks
+
+**CHORD MEMORY** (SCL > CHORD > MODE):
+- New MODE parameter on CHORD page: OFF or MEMORY
+- In MEMORY mode, each key plays a full chord built on that scale degree
+- Press C = I chord (tonic), D = ii chord, E = iii chord, etc.
+- Works with all chord types (TRIAD, 7TH, ADD9, SUS2, SUS4)
+- Works with all voicings (CLOSE, LEAD, OPEN, +BASS)
+- Makes chord progressions accessible without music theory knowledge
+- Record single-key presses, hear full chords in playback
+
+**Compatibility notes**:
+- Projects and presets load normally
+- P_CMODE (chord mode) defaults to OFF (0) in existing projects
+- LANE 8 appears after BROKEN in the GEN genre list
+
+---
 | V10.7.59 … V10.7.80 | 2026-11-19 … 11-21 | Beta |
 | **V10.7.58** | 2026-11-19 | **Public** |
 | V10.7.57 | 2026-11-19 | Beta |
