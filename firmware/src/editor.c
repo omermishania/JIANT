@@ -433,7 +433,7 @@ static void ed_handle(const uint8_t *f, uint32_t n)   /* f: the bytes between F0
         break;
     }
     case ED_INFO:
-        ed_str("JIANT " FELUCCA_VERSION, 24);   /* (0.7.0: was "FELUCCA v..": the web tools take both) */
+        ed_str("COSTA " FELUCCA_VERSION, 24);   /* (Costa OS: fork of JIANT; 0.7.0: was "FELUCCA v..": the web tools take both) */
         ed_b(NENGINES);
         ed_b(P_COUNT);
         ed_b(G_COUNT);

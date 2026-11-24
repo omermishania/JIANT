@@ -231,22 +231,23 @@ static int32_t menu_document(int32_t y, int draw)
     if (ui.menu == 3)
         return prof_document(y, draw);
     if (draw) {
-        cv_text(6, y + 2, &AF_L, "JIANT FM", T_THEME);
-        cv_text(6, y + 38, &AF_S, "Firmware for the MVAVE FM-1", T_TEXT);
+        cv_text(6, y + 2, &AF_L, "COSTA OS", T_THEME);
+        cv_text(6, y + 38, &AF_S, "Fork of JIANT by Juan Jiant", T_TEXT);
         cv_text(6, y + 58, &AF_M, FELUCCA_VERSION, T_THEME);
         cv_text_r(232, y + 61, &AF_S, __DATE__, T_MID, T_BG);
-        cv_text(6, y + 82, &AF_S, "by Juan Jiant, Argentina", T_TEXT);   /* (0.6.96: the project's own) */
+        cv_text(6, y + 82, &AF_S, "Omer's melodic house features", T_TEXT);
         cv_text(6, y + 100, &AF_S, "Free, GPL-3.0-only, no warranty", T_TEXT);
-        cv_text(6, y + 118, &AF_S, "Made in Argentina", T_TEXT);
+        cv_text(6, y + 118, &AF_S, "JIANT (c) Juan Jiant", T_TEXT);
         cv_text(6, y + 138, &AF_S, "github.com", T_MID);
         cv_text(6, y + 156, &AF_S, "/juanjiant-bit", T_MID);
         cv_text(6, y + 174, &AF_S, "/JIANT", T_MID);
         draw_about_qr(158, y + 122);
     }
-    y = menu_text("THE PROJECT", y + 216, T_THEME, draw);
-    y = menu_text("Copyright (C) 2026 Juan Ignacio Antonucci (Juan Jiant)", y, T_TEXT, draw);   /* (0.9.12) */
-    y = menu_text("Made in Argentina by Juan Jiant, visual artist and musician, a dad of two: an independent project, free for everyone.", y, T_TEXT, draw);
-    y = menu_text("Manual, emulator, installer, editor:", y + 4, T_TEXT, draw);
+    y = menu_text("COSTA OS", y + 216, T_THEME, draw);
+    y = menu_text("Fork of JIANT with Omer's melodic house features", y, T_TEXT, draw);
+    y = menu_text("JIANT Copyright (C) 2026 Juan Ignacio Antonucci (Juan Jiant)", y, T_TEXT, draw);   /* (0.9.12) */
+    y = menu_text("JIANT made in Argentina by Juan Jiant: an independent project, free for everyone.", y, T_TEXT, draw);
+    y = menu_text("JIANT manual, emulator, installer, editor:", y + 4, T_TEXT, draw);
     y = menu_text("juanjiant-bit.github.io/JIANT", y, T_MID, draw);
     y = menu_text("Videos: youtube.com/@JUANJIANT", y, T_MID, draw);
     y = menu_text("Support the work:", y + 4, T_TEXT, draw);

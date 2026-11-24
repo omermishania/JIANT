@@ -1,19 +1,21 @@
-# JIANT FM changelog
+# COSTA OS changelog
 
-Custom firmware for the M-VAVE FM-1 by Juan Jiant. Newest version first.
+Fork of JIANT FM with melodic house features. Based on JIANT by Juan Jiant (GPL-3.0).
 
 **Release status**
 
-| Version | Date | Status |
-| --- | --- | --- |
-| **V10.8.21+omer** | 2026-11-24 | **Custom (Omer's fork)** |
-| **V10.8.21** | 2026-11-23 | **Public** |
-| V10.8.1 … V10.8.20 | 2026-11-21 … 11-23 | Beta |
-| **V10.7.81** | 2026-11-21 | **Public** |
+| Version | Date | Status | Based on JIANT |
+| --- | --- | --- | --- |
+| **COSTA 1.0** | 2026-11-24 | **Public** | V10.8.25+omer |
 
 ---
 
-## V10.8.21+omer — Omer's melodic house features (2026-11-24)
+## COSTA 1.0 — Initial release (2026-11-24)
+
+**Costa OS is a fork of JIANT V10.8.25 by Juan Jiant**  
+GPL-3.0-only license. Original JIANT: https://github.com/juanjiant-bit/JIANT
+
+**Omer's melodic house features (from V10.8.21+omer)**
 
 **New Features for Melodic House Production**
 

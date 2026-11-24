@@ -1,10 +1,14 @@
-# JIANT FM
+# COSTA OS
 
-**A bio-generative, morphable, evolving instrument for the M-VAVE FM-1** — living tracks that move each other, sounds that morph, music that evolves as you play. · *Bio-generativo, morfeable, evolutivo.*
+**Fork of JIANT with melodic house features for the M-VAVE FM-1**
+
+Costa OS is a custom firmware fork of **JIANT** by Juan Jiant, adding features for melodic house production.
 
 [![License: GPL-3.0-only](https://img.shields.io/badge/license-GPL--3.0--only-blue.svg)](LICENSE)
 
-**▶ [Emulator](https://juanjiant-bit.github.io/JIANT/emu/)** · **[Installer](https://juanjiant-bit.github.io/JIANT/webapp/installer/)** · **[Editor](https://juanjiant-bit.github.io/JIANT/webapp/editor/)** · **[JIANT Studio](https://juanjiant-bit.github.io/JIANT/studio/)** · **[What's new](https://juanjiant-bit.github.io/JIANT/docs/guide/whats-new-v10.8.21.html)** · **[DRONE CLAY](https://juanjiant-bit.github.io/JIANT/docs/guide/drone-clay.html)** · **[Manual](https://juanjiant-bit.github.io/JIANT/docs/guide/manual.html)** · **[Manual ES](https://juanjiant-bit.github.io/JIANT/docs/guide/manual.es.html)**
+**▶ [Installer](https://omermishania.github.io/JIANT/webapp/installer/)** · **[Features Guide](docs/OMER-FEATURES-CORRECTED.md)** · **[Setup Guide](GITHUB-PAGES-SETUP.md)**
+
+**Original JIANT**: [Emulator](https://juanjiant-bit.github.io/JIANT/emu/) · [Manual](https://juanjiant-bit.github.io/JIANT/docs/guide/manual.html) · [GitHub](https://github.com/juanjiant-bit/JIANT)
 
 ![JIANT FM: the signature and screens of the firmware](docs/jiant-hero.png)
 
@@ -14,9 +18,19 @@ step components you can play live, a song mode you perform and record, a generat
 inside the little keyboard. It is a fork of [Felucca](https://github.com/hugelton/Felucca) 1.1.5.1 by Hügelton
 Instruments (GPL-3.0) and takes its song system from [SLOOP](https://github.com/isod89/sloop-fm1).
 
-> **Current public release: V10.8.25** (not a beta). **Back up your projects before updating**: save a complete
-> backup with the editor or the installer first. If something doesn't work for you, V10.7.81 is still offered in the
-> installer.
+## About Costa OS
+
+**Costa OS 1.0** is based on **JIANT V10.8.25+omer** (GPL-3.0).
+
+**Original JIANT** by Juan Ignacio Antonucci (Juan Jiant):  
+https://github.com/juanjiant-bit/JIANT
+
+**Costa OS adds**:
+- **LANE 8 MODE**: Melodic house genre in GEN
+- **CHORD MEMORY**: One-key chord playing on scale degrees
+- See [OMER-FEATURES-CORRECTED.md](docs/OMER-FEATURES-CORRECTED.md) for details
+
+> **Back up your projects before installing**: save a complete backup with the JIANT editor or installer first.
 >
 > **Omer's fork (V10.8.21+omer)**: This fork adds melodic house production features - LANE 8 MODE (a melodic house
 > genre in GEN) and CHORD MEMORY (single-key chord playing on SCL > CHORD > MODE). See [docs/OMER-FEATURES.md](docs/OMER-FEATURES.md)
