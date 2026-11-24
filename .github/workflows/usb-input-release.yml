@@ -1,8 +1,7 @@
 name: Publish verified USB input beta
+# Costa OS fork: disabled on push; it deploys to Pages and cancels publish-installer.yml
 on:
-  push:
-    branches: [main]
-    paths: [web/USB_INPUT_RELEASE.json]
+  workflow_dispatch:
 permissions:
   contents: read
   actions: read

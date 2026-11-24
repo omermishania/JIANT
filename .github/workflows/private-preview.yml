@@ -1,8 +1,6 @@
 name: Private ADDITIVE installer and emulator
+# Costa OS fork: disabled on push; it deploys to Pages and cancels publish-installer.yml
 on:
-  push:
-    branches: [main]
-    paths: [web/PRIVATE_BUILD.json]
   workflow_dispatch:
 permissions:
   contents: read

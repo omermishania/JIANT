@@ -1,10 +1,6 @@
 name: Publish installer pages
+# Costa OS fork: disabled on push; it deploys to Pages and cancels publish-installer.yml
 on:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/installer-pages.yml
-      - tools/patch_installer_downloads.py
   workflow_dispatch:
 permissions:
   contents: read

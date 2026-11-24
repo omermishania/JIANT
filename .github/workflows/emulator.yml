@@ -5,9 +5,8 @@
 # Two installers: preview/webapp/installer follows web/PREVIEW when set (otherwise main); webapp/installer follows
 # the approved web/STABLE commit. web/EMULATOR independently freezes the browser-only SAMPLE source.
 name: emulator
+# Costa OS fork: disabled on push; it deploys the upstream JIANT site to Pages and cancels publish-installer.yml
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read

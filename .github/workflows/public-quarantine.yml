@@ -1,8 +1,7 @@
 name: Restore stable public references
+# Costa OS fork: disabled on push; it deploys to Pages and cancels publish-installer.yml
 on:
-  push:
-    branches: [main]
-    paths: [web/PUBLIC_CHANNEL.json]
+  workflow_dispatch:
 permissions:
   contents: read
   actions: read

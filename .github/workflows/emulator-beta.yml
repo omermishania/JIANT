@@ -2,10 +2,9 @@ name: Publish beta emulator
 # (V10.6g) The browser emulator of the verified beta: compiled from the same source commit as web/SPLIT_BETA.json, into
 # the site the last beta publish deployed (its Pages artifact, site_run_id); only emu/ changes, every installer,
 # firmware package and editor file is kept byte for byte.
+# Costa OS fork: disabled on push; it deploys to Pages and cancels publish-installer.yml
 on:
-  push:
-    branches: [main]
-    paths: [web/EMULATOR_BETA.json]
+  workflow_dispatch:
 permissions:
   contents: read
   actions: read
