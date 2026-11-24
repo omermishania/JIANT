@@ -243,11 +243,9 @@ static const param_desc_t MUT_DESC[4] = {                /* (0.6.43) MUTATE: P_M
     {"AMOUNT", F_PCT, 0, 127, 0, 0, 0}, {"MODE", F_ENUM, 0, 1, 0, N_MUTMODE, 0}};
 static const char *const N_CHRD[] = {"OFF", "TRIAD", "7TH", "ADD9", "SUS2", "SUS4", "MAJ", "MIN", "7", "MAJ7", "MIN7",
                                      "POWER", 0};
-static const char *const N_CVOI[] = {"CLOSE", "LEAD", "OPEN", "+BASS", 0};
-static const char *const N_CMODE[] = {"OFF", "MEMORY", 0};  /* (Omer) CHORD MODE: OFF or MEMORY (key plays scale degree chord) */
-static const param_desc_t CHORD_DESC[4] = {              /* (0.6.81) SCL > CHORD: P_CHRD P_CVOI P_CSTR; (Omer) P_CMODE */
-    {"CHORD", F_ENUM, 0, 11, 0, N_CHRD, 0}, {"VOICING", F_ENUM, 0, 3, 0, N_CVOI, 0}, {"STRUM", F_PCT, 0, 127, 0, 0, 0},
-    {"MODE", F_ENUM, 0, 1, 0, N_CMODE, 0}};
+static const char *const N_CVOI[] = {"CLOSE", "LEAD", "OPEN", "+BASS", "MEMORY", 0};  /* (Omer) added MEMORY */
+static const param_desc_t CHORD_DESC[3] = {              /* (0.6.81) SCL > CHORD: P_CHRD P_CVOI P_CSTR */
+    {"CHORD", F_ENUM, 0, 11, 0, N_CHRD, 0}, {"VOICING", F_ENUM, 0, 4, 0, N_CVOI, 0}, {"STRUM", F_PCT, 0, 127, 0, 0, 0}};
 static const param_desc_t HUM_DESC[3] = {                /* (0.6.87) SEQ > HUMAN: P_HVEL P_HTIM P_HGAT (127 = 0 %) */
     {"HUMAN", F_PCTINV, 0, 127, 127, 0, 0}, {"TIME", F_PCTINV, 0, 127, 127, 0, 0}, {"GATE", F_PCTINV, 0, 127, 127, 0, 0}};   /* (0.6.92:
                                                          * one amount, P_HVEL; TIME and GATE stay stored, 127) */
@@ -290,7 +288,6 @@ static const param_desc_t *track_desc(const track_t *t, uint32_t id)
         case P_CHRD: return &CHORD_DESC[0];
         case P_CVOI: return &CHORD_DESC[1];
         case P_CSTR: return &CHORD_DESC[2];
-        case P_CMODE: return &CHORD_DESC[3];  /* (Omer) CHORD MODE parameter */
         case P_HVEL: return &HUM_DESC[0];
         case P_HTIM: return &HUM_DESC[1];
         case P_HGAT: return &HUM_DESC[2];
@@ -601,7 +598,7 @@ static const page_t PAGES[] = {
     {"PUNCH", FAM_FX, SC_GLOBAL, GR_PUNCH, {G_PFXLEN, G_PFXRES, 0xFF, 0xFF}},   /* (0.6.99) the punch-in lane: LEN RES, REC, CLEAR */
     {"SCL", FAM_SCL, SC_TRACK, GR_SCALE, {P_ROOT, P_SCALE, P_QUANT, ID_ALLTR}},   /* (JIANT: ROOT, SCALE every melodic track's;
                                                          * 0.7.6: ALL TR, the global, where TRANS was: SCL 2 gone) */
-    {"CHORD", FAM_SCL, SC_TRACK, GR_NONE, {P_CHRD, P_CVOI, P_CSTR, P_CMODE}},   /* (0.6.81) a key plays a chord; (Omer) + MODE */
+    {"CHORD", FAM_SCL, SC_TRACK, GR_NONE, {P_CHRD, P_CVOI, P_CSTR, 0xFF}},   /* (0.6.81) a key plays a chord; (Omer) MEMORY in VOICING */
     {"EDIT 1", FAM_EDIT, SC_ENGINE, GR_NONE, {P_E0, P_E1, P_E2, P_E3}},
     {"EDIT 2", FAM_EDIT, SC_ENGINE, GR_NONE, {P_E4, P_E5, P_E6, P_E7}},
     {"WORDS", FAM_EDIT, SC_TRACK, GR_LYRIC, {P_VLANG, P_VLYR, P_E0, 0xFF}},   /* (0.8.5) VOICE: LANG LYRIC POS, OCT+ TYPE

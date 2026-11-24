@@ -244,7 +244,7 @@ static uint16_t kb_sdue[27];                    /* (0.6.81) samples to the strum
  * high. The root alone on a kit and on MONO / LEGATO / UNISON. The keys only (MIDI notes play as they come); the
  * notes go to the sequencer's recording and the ARP as the key's own would */
 enum { CD_OFF, CD_TRI, CD_SEV, CD_ADD9, CD_SUS2, CD_SUS4, CD_MAJ, CD_MIN, CD_DOM7, CD_MAJ7, CD_MIN7, CD_POW };
-enum { CV_CLOSE, CV_LEAD, CV_OPEN, CV_BASS };
+enum { CV_CLOSE, CV_LEAD, CV_OPEN, CV_BASS, CV_MEMORY };  /* (Omer) CV_MEMORY: each key plays chord on that scale degree */
 static uint8_t chord_last[NTRK][KB_CH], chord_nlast[NTRK];   /* the last chord each track played (LEAD) */
 /* (0.8.3) the first of the intervals p (n of them) the scale (mask) has over a root rel semitones above ROOT; -1 none */
 static int32_t chord_pick(uint32_t mask, int32_t rel, const int8_t *p, uint32_t n)
@@ -262,11 +262,10 @@ static uint32_t chord_build(const track_t *t, uint32_t root, uint8_t *out)
                                      {0, 7, 12, -1}};
     const engine_t *e = ENGINES[eng_idx(t->eng_req)];
     uint32_t mode = (uint32_t)t->p[P_CHRD], vc = (uint32_t)t->p[P_CVOI], n = 0, i, j, ti = trk_index(t) % NTRK;
-    uint32_t cmemory = (uint32_t)t->p[P_CMODE];  /* (Omer) CHORD MEMORY mode */
     int32_t nt[KB_CH + 1], r = (int32_t)root;
     
     /* (Omer) CHORD MEMORY: map played note to scale degree, then build chord on that degree */
-    if (cmemory == 1 && mode >= CD_TRI && mode <= CD_SUS4) {
+    if (vc == CV_MEMORY && mode >= CD_TRI && mode <= CD_SUS4) {
         uint32_t mask = scale_mask(t), deg[12], c = 0;
         int32_t rt = t->p[P_ROOT], key_offset;
         
