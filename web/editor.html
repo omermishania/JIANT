@@ -1087,7 +1087,7 @@ async function openEditorMidi(access, hooks = {}, selected = {}) {
       if (output.open) await output.open();
       input.onmidimessage = e => link.receive(e.data);
       const info = parse[CMD.INFO](await link.request(req.info(), { timeout: 800, retries: 2, quiet: true }));
-      if (!/^(?:JIANT|FELUCCA)\b/i.test(info.version || "")) throw new Error("Not a JIANT editor device");
+      if (!/^(?:JIANT|FELUCCA|COSTA)\b/i.test(info.version || "")) throw new Error("Not a JIANT editor device");
       return {input, output, link, info};
     } catch (e) {
       last = e; link.close(); input.onmidimessage = null;
