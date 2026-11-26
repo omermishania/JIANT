@@ -44,12 +44,12 @@ export function infoVersion(a) {
 export function isJiantInfo(a) {
   const z = a.indexOf(0); if (z < 0) return false;
   const version = String.fromCharCode(...a.slice(0, z));
-  if (!/^(FELUCCA|JIANT) /i.test(version)) return false;
+  if (!/^(FELUCCA|JIANT|COSTA) /i.test(version)) return false;
   let pos = z + 1; const engines = a[pos]; pos += 5;
   for (let i = 0; i < engines; i++) { const end = a.indexOf(0, pos); if (end < 0) return false; pos = end + 1; }
   const ntrk = a[pos], ext = a.slice(pos + 1);
   for (let i = 0; i + 2 < ext.length; i++) if (ext[i] === 0x4A && ext[i + 1] === 1 && ext[i + 2] === 1) return true;
-  return ntrk === 6 && /^(FELUCCA|JIANT) v0\./i.test(version);
+  return ntrk === 6 && /^(FELUCCA|JIANT|COSTA) v0\./i.test(version);
 }
 /* the complete backup (cmds 65..67, INFO 42 01 bit 0): JIANT, Felucca 1.0.3 and later, Skiff (all lay INFO out alike) */
 export function archiveInfo(a) {
@@ -58,7 +58,7 @@ export function archiveInfo(a) {
   const engines = a[pos]; pos += 5;
   for (let i = 0; i < engines; i++) { const end = a.indexOf(0, pos); if (end < 0) throw new Error("Invalid INFO"); pos = end + 1; }
   const ext = a.slice(pos + 1);
-  const supported = /^(FELUCCA|JIANT) /i.test(version) && ext[0] === 16 && ext[1] === 0x55 && ext[2] === 1 &&
+  const supported = /^(FELUCCA|JIANT|COSTA) /i.test(version) && ext[0] === 16 && ext[1] === 0x55 && ext[2] === 1 &&
     ext[4] === 0x4d && ext[5] === 1 && ext[8] === 0x42 && ext[9] === 1 && !!(ext[10] & 1);
   return { version, supported };
 }
