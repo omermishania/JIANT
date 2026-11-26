@@ -38,9 +38,9 @@ jobs:
       - name: Build installer site
         run: |
           mkdir -p _site
-          python3 web/make_site.py release/*.fwsc dev _site
-          echo "Omer's JIANT Fork - Melodic House Features" > _site/README.md
-          echo "Open webapp/installer/ to install the custom firmware" >> _site/README.md
+          python3 web/make_site.py release/felucca-V10.8.48.fwsc V10.8.48 _site
+          echo "Official JIANT Installer - Costa OS Compatible" > _site/README.md
+          echo "Open webapp/installer/ to install official JIANT firmware" >> _site/README.md
       
       - name: Setup Pages
         uses: actions/configure-pages@v5
